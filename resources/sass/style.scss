@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+/* Color tokens */
+$background:#000;
+$text-color-heading: rgba(255, 255, 255, 1);
+$text-color-body: rgba(255, 255, 255, 0.8);
+
+$ui-01: #262626;
+$ui-02: #393939;
+
+$ui-05: #f4f4f4;
+
+
+/* Border tokens */
+$border-radius-3: 8px;
+
+/* Spacing tokens */
+$spacing-1: 2px;
+$spacing-2: 4px;
+$spacing-3: 8px;
+$spacing-4: 12px;
+$spacing-5: 16px;
+$spacing-6: 24px;
+$spacing-7: 32px;
+$spacing-8: 40px;
+$spacing-9: 48px;
+$spacing-10: 64px;
+$spacing-11: 80px;
+$spacing-12: 96px;
+$spacing-13: 160px;
+
+h1, h2, h3,
+h4, h5, h6 {
+    @extend %headings !optional;
+}
+
+%headings {
+    color: $text-color-heading;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $background;
+    color: $text-color-body;
+}
+
+/* Flex styles */
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+/* Grids */
+@mixin simple-grid {
+    display: grid;
+    grid-template-rows: none;
+    gap: $spacing-5;
+    margin: $spacing-5 $spacing-5 $spacing-12;
+
+}
+
+.header-banner {
+    @include simple-grid;
+    grid-template-columns: max-content minmax(auto, 500px);
+}
+
+.projects {
+    @include simple-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+header {
+    h1 {
+        margin: 0 0 $spacing-4;
+    }
+    p {
+        margin: 0;
+    }
+    
+}
+
+/* Components */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-5;
+    
+}
+
+.footer__theme-toggle{
+    display: flex;
+}
+.nav-links {
+    display: flex;
+    gap: $spacing-3;
+}
+
+.info-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    border-radius: 2rem*0.5;
+    border: 1px solid $ui-05;
+    padding: 0 $spacing-4;
+    text-decoration: none;
+    color: $text-color-body;
+    background-color: $ui-02;
+    &:hover, &:focus {
+        background-color: #f4ff7a;
+        color: black;
+    }
+
+}
+
+.card {
+    margin-bottom: $spacing-6;
+    
+    h2 {
+        margin: 0;
+    }
+
+    .image {
+        margin-bottom: $spacing-3;
+        position: relative;
+        display: block;
+        width: 100%;
+
+        img {
+            border-radius: $border-radius-3;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline;
+            &:after {
+                content: ", ";
+            }
+            &:last-child:after {
+                content: "";
+            }
+        }
+    }
+}

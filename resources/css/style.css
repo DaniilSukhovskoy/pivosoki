@@ -1,0 +1,154 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Color tokens */
+/* Border tokens */
+/* Spacing tokens */
+h1, h2, h3,
+h4, h5, h6 {
+  color: white;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Flex styles */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Grids */
+.header-banner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: none;
+      grid-template-rows: none;
+  gap: 16px;
+  margin: 16px 16px 96px;
+  -ms-grid-columns: max-content minmax(auto, 500px);
+      grid-template-columns: -webkit-max-content minmax(auto, 500px);
+      grid-template-columns: max-content minmax(auto, 500px);
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: none;
+      grid-template-rows: none;
+  gap: 16px;
+  margin: 16px 16px 96px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+header h1 {
+  margin: 0 0 12px;
+}
+
+header p {
+  margin: 0;
+}
+
+/* Components */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px;
+}
+
+.footer__theme-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.info-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #f4f4f4;
+  padding: 0 12px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #393939;
+}
+
+.info-link:hover, .info-link:focus {
+  background-color: #f4ff7a;
+  color: black;
+}
+
+.card {
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  margin: 0;
+}
+
+.card .image {
+  margin-bottom: 8px;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.card .image img {
+  border-radius: 8px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  display: inline;
+}
+
+.card ul li:after {
+  content: ", ";
+}
+
+.card ul li:last-child:after {
+  content: "";
+}
