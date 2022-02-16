@@ -30,6 +30,16 @@ $spacing-11: 80px;
 $spacing-12: 96px;
 $spacing-13: 160px;
 
+/* Breakpoints */
+@mixin respond($breakpoint) {
+    @if($breakpoint == medium)  {
+      @media (max-width: 900px) { @content }
+    }
+    @if($breakpoint == small)  {
+      @media (max-width: 600px) { @content }
+    }
+  }
+
 h1, h2, h3,
 h4, h5, h6 {
     @extend %headings !optional;
@@ -59,14 +69,29 @@ body {
 
 }
 
+.dense {
+    grid-auto-flow: row;
+
+}
+
 .header-banner {
     @include simple-grid;
     grid-template-columns: max-content minmax(auto, 500px);
+
+    @include respond(medium) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
 }
 
 .projects {
     @include simple-grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @include respond(small) {
+        grid-template-columns: 1fr;
+
+    }
 }
 
 header {
@@ -83,6 +108,7 @@ header {
 .footer {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     width: 100%;
     justify-content: space-between;
     padding: $spacing-5;
@@ -111,20 +137,17 @@ header {
                 height: 100%;
                 cursor: pointer;
 
+                &:checked+.theme-toggle_text {
+                    background-color: $ui-01;
+                }
+
             }
 
             .theme-toggle_text {
-                padding:0 $spacing-3;
-                &:checked + label {
-                    background-color: $ui-01;
-                    color: red;
-
-                }
+                padding:$spacing-3;
+                border-radius: 2rem;
             }
-
         }
-        
-
     }
 }
 .nav-links {
