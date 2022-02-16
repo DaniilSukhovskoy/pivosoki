@@ -105,6 +105,19 @@ header {
 }
 
 /* Components */
+@mixin round-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    border-radius: 2rem*0.5;
+    padding: 0 $spacing-4;
+    text-decoration: none;
+    color: $text-color-body;
+    background-color: $ui-02;           
+
+}
+
 .footer {
     display: flex;
     flex-wrap: wrap;
@@ -144,8 +157,7 @@ header {
             }
 
             .theme-toggle_text {
-                padding:$spacing-3;
-                border-radius: 2rem;
+                @include round-control;
             }
         }
     }
@@ -156,16 +168,8 @@ header {
 }
 
 .info-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
-    border-radius: 2rem*0.5;
+    @include round-control;
     border: 1px solid $ui-05;
-    padding: 0 $spacing-4;
-    text-decoration: none;
-    color: $text-color-body;
-    background-color: $ui-02;
     &:hover, &:focus {
         background-color: #f4ff7a;
         color: black;
