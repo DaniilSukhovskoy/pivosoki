@@ -1,0 +1,32 @@
+// Breakpoints
+@mixin respond($breakpoint) {
+    @if($breakpoint == medium)  {
+      @media (max-width: 900px) { @content }
+    }
+    @if($breakpoint == small)  {
+      @media (max-width: 600px) { @content }
+    }
+}
+
+// Grids
+@mixin simple-grid {
+    display: grid;
+    grid-template-rows: none;
+    gap: $spacing-5;
+    margin: $spacing-5 $spacing-5 $spacing-12;
+
+}
+
+// Components
+@mixin round-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    border-radius: 2rem*0.5;
+    padding: 0 $spacing-4;
+    text-decoration: none;
+    color: $text-color-body;
+    background-color: $ui-02;           
+
+}

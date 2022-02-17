@@ -1,0 +1,36 @@
+.card {
+    margin-bottom: $spacing-6;
+    
+    h2 {
+        margin: 0;
+    }
+
+    .image {
+        margin-bottom: $spacing-3;
+        position: relative;
+        display: block;
+        width: 100%;
+
+        img {
+            border-radius: $border-radius-3;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline;
+            &:after {
+                content: ", ";
+            }
+            &:last-child:after {
+                content: "";
+            }
+        }
+    }
+}

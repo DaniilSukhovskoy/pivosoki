@@ -1,0 +1,34 @@
+header {
+    h1 {
+        margin: 0 0 $spacing-4;
+    }
+    p {
+        margin: 0;
+    }
+    
+}
+
+.header-banner {
+    @include simple-grid;
+    grid-template-columns: max-content minmax(auto, 500px);
+
+    @include respond(medium) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: $spacing-3;
+}
+
+.info-link {
+    @include round-control;
+    border: 1px solid $ui-05;
+    &:hover, &:focus {
+        background-color: #f4ff7a;
+        color: black;
+    }
+
+}
