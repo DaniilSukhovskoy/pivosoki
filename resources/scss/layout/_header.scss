@@ -10,12 +10,10 @@ header {
 
 .header-banner {
     @include simple-grid;
+    @include respond-above(md) {
     grid-template-columns: max-content minmax(auto, 500px);
-
-    @include respond(medium) {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
     }
+    
 }
 
 .nav-links {
@@ -27,8 +25,8 @@ header {
     @include round-control;
     border: 1px solid $ui-05;
     &:hover, &:focus {
-        background-color: #f4ff7a;
-        color: black;
+        background-color: $interactive-1;
+        color: $inverse-1;
     }
 
 }

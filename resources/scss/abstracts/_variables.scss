@@ -3,6 +3,10 @@ $background:#000;
 $text-color-heading: rgba(255, 255, 255, 1);
 $text-color-body: rgba(255, 255, 255, 0.8);
 
+$inverse-1: #000;
+
+$interactive-1: #f4ff7a;
+
 $ui-01: #262626;
 $ui-02: #393939;
 
@@ -26,3 +30,13 @@ $spacing-10: 64px;
 $spacing-11: 80px;
 $spacing-12: 96px;
 $spacing-13: 160px;
+
+//Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

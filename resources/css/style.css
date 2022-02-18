@@ -352,6 +352,18 @@ html {
           box-sizing: border-box;
 }
 
+html picture, html img, html video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -393,19 +405,17 @@ header p {
   display: grid;
   -ms-grid-rows: none;
       grid-template-rows: none;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   gap: 16px;
   margin: 16px 16px 96px;
-  -ms-grid-columns: max-content minmax(auto, 500px);
-      grid-template-columns: -webkit-max-content minmax(auto, 500px);
-      grid-template-columns: max-content minmax(auto, 500px);
 }
 
-@media (max-width: 900px) {
+@media (min-width: 768px) {
   .header-banner {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
+    -ms-grid-columns: max-content minmax(auto, 500px);
+        grid-template-columns: -webkit-max-content minmax(auto, 500px);
+        grid-template-columns: max-content minmax(auto, 500px);
   }
 }
 
@@ -437,7 +447,80 @@ header p {
 
 .info-link:hover, .info-link:focus {
   background-color: #f4ff7a;
-  color: black;
+  color: #000;
+}
+
+.project-layout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: none;
+      grid-template-rows: none;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 16px 16px 96px;
+}
+
+@media (min-width: 768px) {
+  .project-layout {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .project-layout {
+    -ms-grid-columns: 25% 1fr;
+        grid-template-columns: 25% 1fr;
+  }
+}
+
+@media (min-width: 1400px) {
+  .project-layout {
+    -ms-grid-columns: 25% 1fr 25%;
+        grid-template-columns: 25% 1fr 25%;
+  }
+}
+
+.info-layout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: none;
+      grid-template-rows: none;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 16px 16px 96px;
+}
+
+@media (min-width: 768px) {
+  .info-layout {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .info-layout {
+    -ms-grid-columns: 25% 1fr;
+        grid-template-columns: 25% 1fr;
+  }
+}
+
+@media (min-width: 1400px) {
+  .info-layout {
+    -ms-grid-columns: 25% 1fr 25%;
+        grid-template-columns: 25% 1fr 25%;
+  }
+}
+
+.info-layout h3 {
+  margin: 0;
+}
+
+.info-layout p {
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 .footer {
@@ -467,23 +550,15 @@ header p {
 .card .image {
   margin-bottom: 8px;
   position: relative;
-  display: block;
-  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .card .image img {
-  border-radius: 8px;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
-}
-
-.card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .card ul li {
@@ -561,15 +636,15 @@ header p {
   display: grid;
   -ms-grid-rows: none;
       grid-template-rows: none;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   gap: 16px;
   margin: 16px 16px 96px;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 576px) {
   .projects {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
   }
 }

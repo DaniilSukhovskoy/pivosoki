@@ -1,9 +1,6 @@
 .projects {
     @include simple-grid;
+    @include respond-above(sm) {
     grid-template-columns: 1fr 1fr 1fr;
-
-    @include respond(small) {
-        grid-template-columns: 1fr;
-
     }
 }

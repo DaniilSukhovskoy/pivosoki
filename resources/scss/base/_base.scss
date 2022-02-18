@@ -7,6 +7,18 @@
  */
 html {
   box-sizing: border-box;
+
+  picture, img, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  ul {
+    @include simple-list;
+  }
+
+
 }
 
 /**
