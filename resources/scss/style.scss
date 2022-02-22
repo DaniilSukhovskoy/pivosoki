@@ -4,6 +4,7 @@
 @import
   'abstracts/variables',
   'abstracts/functions',
+  'abstracts/breakpoints',
   'abstracts/mixins';
 
 // 2. Vendors
@@ -19,6 +20,7 @@
 
 // 4. Layout-related sections
 @import
+  'layout/grid',
   'layout/header',
   'layout/project',
   'layout/info',
@@ -28,6 +30,7 @@
 @import
   'components/button',
   'components/card',
+  'components/project-banner',
   'components/theme-toggle';
 
 // 6. Page-specific styles

@@ -17,3 +17,7 @@ body {
     background-color: $background;
     color: $text-color-body;
 }
+
+p {
+    max-width: 75ch
+}
