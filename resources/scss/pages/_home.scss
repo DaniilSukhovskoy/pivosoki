@@ -1,4 +1,8 @@
 .projects {
-    @include simple-grid;
+    display: grid;
+    grid-template-rows: none;
+    grid-template-columns: 1fr;
+    gap: $spacing-5;
+    padding-bottom: $spacing-5;
     grid-template-columns: 1fr 1fr 1fr;
 }

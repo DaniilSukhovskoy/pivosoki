@@ -1,9 +1,12 @@
-.project-content{
-    margin-bottom: 20vh;
+.project{
+    margin-top: 100vh;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    background-color: $background;
+    position: relative;
+    z-index: 2;
 }
 
-.related-projects {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 $spacing-5;
+.project-content {
+    margin-bottom: 20vh;
 }

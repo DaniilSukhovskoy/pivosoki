@@ -9,10 +9,11 @@ $grid-gaps: (
 
 // base layout
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 $spacing-5;
+    max-width: 2800px;
+    margin: auto;
+    padding-left: $spacing-5;
+    padding-right: $spacing-5;
+
 }
 
 .row {

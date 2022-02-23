@@ -1,16 +1,24 @@
 header {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-3;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $spacing-5;
+    padding-bottom: $spacing-5;
+
     h1 {
-        margin: 0 0 $spacing-4;
-    }
-    p {
         margin: 0;
     }
-    
+
 }
 
-.header-banner {
-    @include simple-grid;
-    
+.header-comp {
+    padding-top: $spacing-13;
 }
 
 .nav-links {
@@ -21,7 +29,7 @@ header {
 .info-link {
     @include round-control;
     border: 1px solid $ui-05;
-    &:hover, &:focus {
+    &:hover, &:focus, &:active {
         background-color: $interactive-1;
         color: $inverse-1;
     }

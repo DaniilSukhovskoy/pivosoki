@@ -1,14 +1,4 @@
 
-
-// Grid templates
-@mixin simple-grid {
-  display: grid;
-  grid-template-rows: none;
-  grid-template-columns: 1fr;
-  gap: $spacing-5;
-  margin: $spacing-5 $spacing-5 $spacing-12;
-}
-
 // Components
 @mixin round-control {
   display: flex;

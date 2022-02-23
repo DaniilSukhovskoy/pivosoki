@@ -350,6 +350,7 @@ template {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html img, html video {
@@ -388,7 +389,7 @@ h2 {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #000;
+  background-color: black;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -397,10 +398,10 @@ p {
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
+  max-width: 2800px;
+  margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .row {
@@ -908,23 +909,33 @@ p {
   }
 }
 
-header h1 {
-  margin: 0 0 12px;
+header {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-header p {
+header h1 {
   margin: 0;
 }
 
-.header-banner {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: none;
-      grid-template-rows: none;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  gap: 16px;
-  margin: 16px 16px 96px;
+.header-comp {
+  padding-top: 160px;
 }
 
 .nav-links {
@@ -953,31 +964,25 @@ header p {
   border: 1px solid #f4f4f4;
 }
 
-.info-link:hover, .info-link:focus {
+.info-link:hover, .info-link:focus, .info-link:active {
   background-color: #f4ff7a;
   color: #000;
+}
+
+.project {
+  margin-top: 100vh;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  background-color: black;
+  position: relative;
+  z-index: 2;
 }
 
 .project-content {
   margin-bottom: 20vh;
 }
 
-.related-projects {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.info-layout h3 {
-  margin: 0;
-}
-
-.info-layout p {
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-
-.footer {
+footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -991,6 +996,11 @@ header p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 16px;
+  position: relative;
+  z-index: 2;
+  background-color: black;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .card {
@@ -1038,8 +1048,11 @@ header p {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  max-height: 1400px;
+  width: 100%;
+  top: 0;
+  position: fixed;
   overflow: hidden;
+  z-index: 1;
 }
 
 .project-banner .banner-image {
@@ -1130,7 +1143,7 @@ header p {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   gap: 16px;
-  margin: 16px 16px 96px;
+  padding-bottom: 16px;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
 }
