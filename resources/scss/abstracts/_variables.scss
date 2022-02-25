@@ -1,7 +1,14 @@
 /* Color tokens */
 $background:black;
-$text-color-heading: rgba(255, 255, 255, 1);
-$text-color-body: rgba(255, 255, 255, 0.8);
+$text-color-heading: rgba(255, 255, 255, 0.6);
+$text-color-body: rgba(255, 255, 255, 1);
+
+$text-01: #f4f4f4; // Primary text; Body copy; Headers; Hover text color for $text-02
+$text-02: #c6c6c6; // Secondary text; Input labels
+$text-03: #6f6f6f; // Placeholder text
+$text-04: #ffffff; // Text on interactive colors
+$text-05: #8d8d8d; // Tertiary text; Help text
+
 
 $inverse-1: #000;
 

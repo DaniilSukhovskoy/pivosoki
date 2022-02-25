@@ -8,18 +8,25 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $background;
+  color: $text-01;
+}
 
-  img, video {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-  ul {
-    @include simple-list;
-  }
+img, video, figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
 
-
+ul {
+  @include simple-list;
 }
 
 /**

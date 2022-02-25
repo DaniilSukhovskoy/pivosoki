@@ -1,10 +1,10 @@
-h1, h2, h3,
-h4, h5, h6 {
-    @extend %headings !optional;
-}
-
 %headings {
-    color: $text-color-heading;
+    margin: 0;
+    font-weight: normal;
+    color: $text-02;
+}
+h1 {
+    font-size: 1.5rem;
 }
 
 h2 {
@@ -12,12 +12,11 @@ h2 {
 }
 
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: $background;
-    color: $text-color-body;
-}
-
 p {
-    max-width: 75ch
+    margin-top: 0;
+    margin-bottom: $spacing-5;
+    max-width: 75ch;
+    font-size: 1.125rem;
+    line-height: 1.4;
+
 }
