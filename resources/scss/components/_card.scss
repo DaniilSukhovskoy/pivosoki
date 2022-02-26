@@ -1,6 +1,7 @@
 .card {
     margin-bottom: $spacing-6;
     color: $text-02;
+    @include fluid-font-size(18px, 20px, 320px, 768px);
 
     a :hover ~ figcaption {
         color: $text-01;
