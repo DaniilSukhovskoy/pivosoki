@@ -354,6 +354,10 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
   color: #f4f4f4;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
 }
 
 a {
@@ -399,14 +403,41 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 32px;
+}
+
+@media (min-width: 320px) {
+  h2 {
+    font-size: calc(13.03704px + 100vw * 0.05926);
+  }
+}
+
+@media (min-width: 1400px) {
+  h2 {
+    font-size: 96px;
+  }
+}
+
+h3, p {
+  font-size: 18px;
+}
+
+@media (min-width: 320px) {
+  h3, p {
+    font-size: calc(15.14286px + 100vw * 0.00893);
+  }
+}
+
+@media (min-width: 768px) {
+  h3, p {
+    font-size: 22px;
+  }
 }
 
 p {
   margin-top: 0;
   margin-bottom: 16px;
   max-width: 75ch;
-  font-size: 1.125rem;
   line-height: 1.4;
 }
 
@@ -1008,12 +1039,11 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 16px;
   padding: 16px;
   position: relative;
   z-index: 2;
   background-color: black;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .card {
@@ -1038,7 +1068,7 @@ footer {
 }
 
 .card .image {
-  margin-bottom: 8px;
+  padding-bottom: 8px;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -1104,7 +1134,7 @@ footer {
 }
 
 .project-banner .banner-text h2 {
-  font-size: 4rem;
+  color: #f4f4f4;
 }
 
 .footer_theme-toggle {
@@ -1175,4 +1205,11 @@ footer {
   gap: 16px;
   padding-bottom: 16px;
   grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 600px) {
+  .projects {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
 }

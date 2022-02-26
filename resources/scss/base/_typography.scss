@@ -1,3 +1,4 @@
+
 %headings {
     margin: 0;
     font-weight: normal;
@@ -8,7 +9,11 @@ h1 {
 }
 
 h2 {
-    font-size: 1.25rem;
+    @include fluid-font-size(32px, 96px, 320px, 1400px); // minFontSize, maxFontSize, minViewport, maxViewport
+}
+
+h3, p {
+    @include fluid-font-size(18px, 22px, 320px, 768px); // minFontSize, maxFontSize, minViewport, maxViewport
 }
 
 
@@ -16,7 +21,7 @@ p {
     margin-top: 0;
     margin-bottom: $spacing-5;
     max-width: 75ch;
-    font-size: 1.125rem;
     line-height: 1.4;
+    
 
 }

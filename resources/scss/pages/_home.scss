@@ -5,4 +5,8 @@
     gap: $spacing-5;
     padding-bottom: $spacing-5;
     grid-template-columns: 1fr;
+
+    @media screen and (min-width: 600px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

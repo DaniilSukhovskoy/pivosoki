@@ -4,10 +4,9 @@ footer {
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    gap: $spacing-5;
     padding: $spacing-5;
     position: relative;
     z-index: 2;
     background-color: $background;
-    padding-top: $spacing-5;
-    padding-bottom: $spacing-5;
 }

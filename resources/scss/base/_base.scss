@@ -11,6 +11,8 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   background-color: $background;
   color: $text-01;
+
+  text-size-adjust: none; //disables text inflation algorithm used on some smartphones and tablets
 }
 
 a {
