@@ -450,6 +450,10 @@ p {
   padding-right: 16px;
 }
 
+.extra-margin {
+  margin-bottom: 20vh;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1023,10 +1027,6 @@ header h1 {
   z-index: 2;
 }
 
-.project-content {
-  margin-bottom: 20vh;
-}
-
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1048,6 +1048,7 @@ footer {
 }
 
 .card {
+  height: auto;
   margin-bottom: 24px;
   color: #c6c6c6;
   font-size: 18px;
@@ -1248,4 +1249,11 @@ footer {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.grid {
+  max-width: 2800px;
+  margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }

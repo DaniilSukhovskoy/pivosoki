@@ -6,7 +6,15 @@
     padding-bottom: $spacing-5;
     grid-template-columns: 1fr;
 
+    // replace with masonry and basic breakpoints laters
     @media screen and (min-width: 600px) {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+.grid {
+    max-width: 2800px;
+    margin: auto;
+    padding-left: $spacing-5;
+    padding-right: $spacing-5;
 }
