@@ -12,9 +12,25 @@
     }
 }
 
+/*
 .grid {
     max-width: 2800px;
     margin: auto;
+    background-color: rebeccapurple;
     padding-left: $spacing-5;
     padding-right: $spacing-5;
 }
+
+    
+
+.grid-item {
+    display: inline-block;
+    width: calc(100% / 3);
+
+
+}
+
+.one-four {
+    width: calc(100% / 3);
+}
+*/

@@ -12,7 +12,9 @@ html {
   background-color: $background;
   color: $text-01;
 
-  text-size-adjust: none; //disables text inflation algorithm used on some smartphones and tablets
+  -webkit-font-smoothing: antialiased; // test
+
+  text-size-adjust: none; // disables text inflation algorithm used on some smartphones and tablets
 }
 
 a {
