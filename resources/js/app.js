@@ -1,10 +1,9 @@
 // init Masonry
-var elem = document.querySelector('.grid');
+var elem = document.querySelector('.mansory-grid');
 
-var msnry = new Masonry( '.grid', {
-    itemSelector: '.grid-item',
+var msnry = new Masonry( '.mansory-grid', {
+    itemSelector: '.mansory-card',
     columnWidth: '.one-four',
-    gutter: 160,
     horizontalOrder: true,
     percentPosition: true,
   });

@@ -16,6 +16,11 @@ $grid-gaps: (
 
 }
 
+.fix-padding {
+    padding-left: $spacing-3;
+    padding-right: $spacing-3;
+}
+
 .extra-margin {
     margin-bottom: 20vh;
 }

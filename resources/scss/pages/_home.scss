@@ -11,26 +11,39 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+// mansory
+.mansory-grid {
+    width: 100%;
+    height: auto;
+    will-change: height;
+    transition: height 666ms cubic-bezier(0.4, 0, 0.22, 1) 0s;
 
-/*
-.grid {
-    max-width: 2800px;
-    margin: auto;
-    background-color: rebeccapurple;
-    padding-left: $spacing-5;
-    padding-right: $spacing-5;
+    figure {
+        display: block;
+
+        picture {
+            position: relative;
+            height: 1px;
+            backface-visibility: hidden;
+            margin: 0px;
+            overflow: hidden;
+        }
+    }
 }
 
+.one-four,
+.mansory-card {
+    width: 100%;
+
+    @media (min-width: 480px) {
+        width: 50%;
+    }
     
-
-.grid-item {
-    display: inline-block;
-    width: calc(100% / 3);
-
-
+    @media (min-width: 768px) {
+        width: calc(100% / 3);
+    }
 }
 
-.one-four {
-    width: calc(100% / 3);
+.mansory-card {
+    padding: 8px; 
 }
-*/

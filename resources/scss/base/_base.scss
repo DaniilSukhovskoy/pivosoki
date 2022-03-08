@@ -17,6 +17,10 @@ html {
   text-size-adjust: none; // disables text inflation algorithm used on some smartphones and tablets
 }
 
+body {
+  height: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -26,13 +30,13 @@ img, video, figure {
   display: block;
   object-fit: cover;
   width: 100%;
-  height: 100%;
   margin: 0;
 }
 
 ul {
   @include simple-list;
 }
+
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
