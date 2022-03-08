@@ -454,11 +454,6 @@ p {
   padding-right: 16px;
 }
 
-.fix-padding {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
 .extra-margin {
   margin-bottom: 20vh;
 }
@@ -1280,25 +1275,21 @@ footer {
   overflow: hidden;
 }
 
-.one-four,
-.mansory-card {
+.one-three,
+.card {
   width: 100%;
 }
 
 @media (min-width: 480px) {
-  .one-four,
-  .mansory-card {
-    width: 50%;
+  .one-three,
+  .card {
+    width: calc((100% - 16px)/ 2);
   }
 }
 
 @media (min-width: 768px) {
-  .one-four,
-  .mansory-card {
-    width: calc(100% / 3);
+  .one-three,
+  .card {
+    width: calc((100% - 16px * 2)/ 3);
   }
-}
-
-.mansory-card {
-  padding: 8px;
 }

@@ -1,14 +1,15 @@
 // init Masonry
 var elem = document.querySelector('.mansory-grid');
 
-var msnry = new Masonry( '.mansory-grid', {
-    itemSelector: '.mansory-card',
-    columnWidth: '.one-four',
-    horizontalOrder: true,
-    percentPosition: true,
-  });
+var msnry;
 
-  imagesLoaded( grid ).on( 'progress', function() {
+  imagesLoaded('.mansory-grid').on('progress', function() {
     // layout Masonry after each image loads
-    msnry.layout();
+    msnry = new Masonry( '.mansory-grid', {
+      itemSelector: '.card',
+      columnWidth: '.one-three',
+      gutter: 16,
+      horizontalOrder: true,
+      percentPosition: true,
+    });
   });

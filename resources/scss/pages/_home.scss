@@ -31,19 +31,15 @@
     }
 }
 
-.one-four,
-.mansory-card {
+.one-three,
+.card {
     width: 100%;
 
     @media (min-width: 480px) {
-        width: 50%;
+        width: calc((100% - 16px)/ 2);
     }
     
     @media (min-width: 768px) {
-        width: calc(100% / 3);
+        width: calc((100% - 16px * 2)/ 3);
     }
-}
-
-.mansory-card {
-    padding: 8px; 
 }
