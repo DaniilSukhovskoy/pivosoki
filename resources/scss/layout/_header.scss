@@ -11,6 +11,7 @@ header {
     padding-top: $spacing-5;
     padding-bottom: $spacing-5;
 
+    
     h1 {
         margin: 0;
     }
@@ -28,10 +29,12 @@ header {
 
 .info-link {
     @include round-control;
-    border: 1px solid $ui-05;
+    background-color: var(--ui-02);
+    color: var(--text-color-01);
+    border: 1px solid var(--ui-05);
     &:hover, &:focus, &:active {
-        background-color: $interactive-1;
-        color: $inverse-1;
+        background-color: var(--primary-color);
+        color: var(--inverse-01);
     }
 
 }

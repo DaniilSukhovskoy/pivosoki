@@ -1,7 +1,7 @@
 .project{
     padding-top: 20px;
     padding-bottom: 80px;
-    background-color: $background;
+    background-color: var(--bg-color);
     position: relative;
     z-index: 2;
 }

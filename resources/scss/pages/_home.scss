@@ -1,17 +1,3 @@
-.projects {
-    display: grid;
-    grid-template-rows: none;
-    grid-template-columns: 1fr;
-    gap: $spacing-5;
-    padding-bottom: $spacing-5;
-    grid-template-columns: 1fr;
-
-    // replace with masonry and basic breakpoints laters
-    @media screen and (min-width: 600px) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-// mansory
 .mansory-grid {
     width: 100%;
     height: auto;

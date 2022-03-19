@@ -6,7 +6,7 @@
     .theme-toggle {
         display: inline-flex;
         align-items: center;
-        background-color: $ui-02;
+        background-color: var(--ui-02);
         height: 2rem;
         border-radius: 2rem*0.5;
 
@@ -21,7 +21,7 @@
                 cursor: pointer;
 
                 &:checked+.theme-toggle_text {
-                    background-color: $ui-01;
+                    background-color: var(--ui-01);
                 }
 
             }

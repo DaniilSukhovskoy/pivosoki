@@ -4,15 +4,19 @@
     @include banner-height();
     
     > * {
-        width: 100%;
         @include banner-height();
         position: fixed;
+        width: 100%;
     }
 
     .banner-image {
         top: 0;
         overflow: hidden;
         z-index: 1;
+
+        img {
+            height: 100%
+        }
     }
 
     .banner-text {
@@ -23,7 +27,7 @@
         align-items: center;
 
         h2{
-            color: $text-01;
+            color: var(--text-color-01);
         }
     }
 

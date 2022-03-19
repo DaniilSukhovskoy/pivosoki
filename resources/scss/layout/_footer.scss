@@ -8,5 +8,5 @@ footer {
     padding: $spacing-5;
     position: relative;
     z-index: 2;
-    background-color: $background;
+    background-color: var(--bg-color);
 }

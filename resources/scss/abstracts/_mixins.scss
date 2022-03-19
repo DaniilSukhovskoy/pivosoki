@@ -11,9 +11,7 @@ h4, h5, h6 {
   height: 2rem;
   border-radius: 2rem*0.5;
   padding: 0 $spacing-4;
-  text-decoration: none;
-  color: $text-color-body;
-  background-color: $ui-02;           
+  text-decoration: none;          
 }
 
 @mixin simple-list {
@@ -25,11 +23,9 @@ h4, h5, h6 {
 // Banners height
 @mixin banner-height($minHeight: 50vh, $maxHeight: 100vh, $minViewport: 320px, $maxViewport: 1200px) {
 
-  @media screen and (min-width: $minHeight){
-    height: $minHeight;
-  }
+  height: $minHeight;
 
-  @media screen and (min-width: $maxHeight){
+  @media (min-width: $maxViewport){
     height: $maxHeight;
   }
 
