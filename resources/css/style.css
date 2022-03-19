@@ -346,7 +346,7 @@ template {
 /**
  * Set up a decent box model on the root element
  */
-:root[data-theme="theme-dark"] {
+:root {
   --bg-color:black;
   --text-color-01: #f4f4f4;
   --text-color-02: #c6c6c6;
@@ -362,7 +362,7 @@ template {
   --ui-05: #f4f4f4;
 }
 
-.light [data-theme="theme-light"] {
+.lightmode {
   --bg-color:white;
   --text-color-01: #161616;
   --text-color-02: #525252;

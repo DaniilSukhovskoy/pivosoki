@@ -265,32 +265,34 @@
             </div>
         </div>
     </div>
-    
+    <!--Masonry-->
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
     <script src="./resources/js/mansory.js"></script>
     
-    <script src="./resources/js/color-theme-toggle.js"></script>
 
 
 </body>
 <footer class="container">
     <span>© Daniil Sukhovskoy 2022</span>
     <div class="footer_theme-toggle">
-        <div class="theme-toggle">
-            <label class="theme-toggle_item">
+        <div class="theme-toggle" role="radiogroup" tabindex="0" aria-label="Select a color scheme preference">
+            <div class="theme-toggle_item">
                 <input class="theme-toggle_control" type="radio" name="color-theme" value="light">
-                <span class="theme-toggle_text">light</span>
-            </label>
-            <label class="theme-toggle_item">
+                <label class="theme-toggle_text" for="light">light</label>
+            </div>
+            <div class="theme-toggle_item">
                 <input class="theme-toggle_control" type="radio" name="color-theme" value="dark" checked>
-                <span class="theme-toggle_text">dark</span>
-            </label>
-            <label class="theme-toggle_item">
+                <label class="theme-toggle_text" for="dark">dark</label>
+            </div>
+            <div class="theme-toggle_item">
                 <input class="theme-toggle_control" type="radio" name="color-theme" value="auto">
-                <span class="theme-toggle_text">auto</span>
-            </label>
+                <label class="theme-toggle_text" for="auto">auto</label>
+            </div>
         </div>
     </div>
+
+    <!--Theme toggle script-->
+    <script src="./resources/js/color-theme-toggle.js"></script>
 </footer>
 </html>
