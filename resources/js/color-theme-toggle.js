@@ -3,10 +3,6 @@ console.log(lightMode);
 
 const lightModeToggle = document.getElementsByName("color-theme");
 
-// browser color
-//const browserThemeColor = document.querySelector('meta[name="theme-color"]'); //test
-//const white = '#FFFFFF';
-//const black = '#000000';
 
 // get radio
 let lightRadio = document.querySelector('input[value="light"]');
@@ -18,13 +14,11 @@ let autoRadio = document.querySelector('input[value="auto"]');
 const enableLightMode = () => {
   document.documentElement.classList.add("lightmode");
   localStorage.setItem("lightMode", "enabled");
-  //themeColor.setAttribute('content', white); //test
 };
 
 const disableLightMode = () => {
   document.documentElement.classList.remove("lightmode");
   localStorage.setItem("lightMode", "disabled");
-  //themeColor.setAttribute('content', black); //test
 };
 
 const enableAutoMode = () => {
@@ -39,21 +33,17 @@ const autoMode = () => {
 
       if (colorScheme === "light") {
         document.documentElement.classList.add("lightmode");
-        //themeColor.setAttribute('content', white); //test
       }
       else {
         document.documentElement.classList.remove("lightmode");
-        //themeColor.setAttribute('content', black); //test
       }
     });
 
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
     document.documentElement.classList.add("lightmode");
-    //themeColor.setAttribute('content', white); //test
   }
   else {
     document.documentElement.classList.remove("lightmode");
-    //themeColor.setAttribute('content', black); //test
   }
 }
 
