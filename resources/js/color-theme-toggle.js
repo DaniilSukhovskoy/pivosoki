@@ -8,6 +8,8 @@ let lightRadio = document.querySelector('input[value="light"]');
 let darkRadio = document.querySelector('input[value="dark"]');
 let autoRadio = document.querySelector('input[value="auto"]');
 
+
+// modes functions
 const enableLightMode = () => {
   document.documentElement.classList.add("lightmode");
   localStorage.setItem("lightMode", "enabled");
@@ -18,27 +20,30 @@ const disableLightMode = () => {
   localStorage.setItem("lightMode", "disabled");
 };
 
-// fix Auto working only on change
+const enableAutoMode = () => {
+  localStorage.setItem("lightMode", "auto");
+}
+
 const autoMode = () => {
+  enableAutoMode();
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
       const colorScheme = e.matches ? "dark" : "light";
       console.log(colorScheme);
 
       if (colorScheme === "light") {
-        enableLightMode();
+        document.documentElement.classList.add("lightmode");
       }
       else {
-        disableLightMode();
+        document.documentElement.classList.remove("lightmode");
       }
     });
+
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    enableLightMode();
-    localStorage.setItem("lightMode", "auto");
-  } else {
-    disableLightMode();
-    localStorage.setItem("lightMode", "auto");
+    document.documentElement.classList.add("lightmode");
   }
-  //localStorage.setItem("lightMode", "auto");
+  else {
+    document.documentElement.classList.remove("lightmode");
+  }
 }
 
 // check local storage and update
@@ -77,7 +82,6 @@ function showSelected(e) {
   else if (this.checked && this.value === "auto") {
     console.log(`You selected ${this.value}`);
     autoMode();
-    localStorage.setItem("lightMode", "auto");
   }
 }
 
