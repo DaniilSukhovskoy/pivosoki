@@ -3,6 +3,8 @@ console.log(lightMode);
 
 const lightModeToggle = document.getElementsByName("color-theme");
 
+// theme color
+// const metaThemeColor = document.querySelector("meta[name=theme-color]");
 
 // get radio
 let lightRadio = document.querySelector('input[value="light"]');
