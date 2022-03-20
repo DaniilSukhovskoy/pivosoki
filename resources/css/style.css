@@ -392,6 +392,10 @@ html {
           text-size-adjust: none;
 }
 
+body {
+  background-color: inherit;
+}
+
 a {
   color: inherit;
   text-decoration: none;
