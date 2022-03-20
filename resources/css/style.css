@@ -1197,7 +1197,7 @@ footer {
 }
 
 .project-banner .banner-text h2 {
-  color: var(--text-color-01);
+  color: var(--text-color-04);
 }
 
 .footer_theme-toggle {
@@ -1217,7 +1217,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--ui-02);
+  background-color: var(--ui-01);
   height: 2rem;
   border-radius: 1rem;
 }
@@ -1237,7 +1237,7 @@ footer {
 }
 
 .footer_theme-toggle .theme-toggle .theme-toggle_item .theme-toggle_control:checked + .theme-toggle_text {
-  background-color: var(--ui-01);
+  background-color: var(--ui-03);
 }
 
 .footer_theme-toggle .theme-toggle .theme-toggle_item .theme-toggle_text {

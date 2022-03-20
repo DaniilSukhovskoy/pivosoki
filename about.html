@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/css/style.css">
+    <meta name="theme-color" content="currentColor">
     <title>Pivosoki</title>
 </head>
 <header class="container">
@@ -89,15 +90,15 @@
     <div class="footer_theme-toggle">
         <div class="theme-toggle" role="radiogroup" tabindex="0" aria-label="Select a color scheme preference">
             <div class="theme-toggle_item">
-                <input class="theme-toggle_control" type="radio" name="color-theme" value="light">
+                <input class="theme-toggle_control" type="radio" name="color-theme" value="light" autocomplete="off">
                 <label class="theme-toggle_text" for="light">light</label>
             </div>
             <div class="theme-toggle_item">
-                <input class="theme-toggle_control" type="radio" name="color-theme" value="dark" checked>
+                <input class="theme-toggle_control" type="radio" name="color-theme" value="dark" autocomplete="off" checked>
                 <label class="theme-toggle_text" for="dark">dark</label>
             </div>
             <div class="theme-toggle_item">
-                <input class="theme-toggle_control" type="radio" name="color-theme" value="auto">
+                <input class="theme-toggle_control" type="radio" name="color-theme" value="auto" autocomplete="off">
                 <label class="theme-toggle_text" for="auto">auto</label>
             </div>
         </div>
@@ -106,3 +107,4 @@
     <!--Theme toggle script-->
     <script src="./resources/js/color-theme-toggle.js"></script>
 </footer>
+</html>
