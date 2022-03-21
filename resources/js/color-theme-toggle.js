@@ -4,7 +4,7 @@ function initTheme() {
   const lightModeToggle = document.getElementsByName("color-theme");
   //если первый раз и в хранилище пусто, то дефолтную тему
   if(!lightMode) {
-      lightMode = 'dark'; // или может auto
+      lightMode = 'dark';
   }
 for(const radioButton of lightModeToggle) {
     radioButton.addEventListener('change', showSelected);
@@ -23,27 +23,23 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 function showSelected() {
   let lightMode = document.querySelector('input[name="color-theme"]:checked').value;
   localStorage.setItem("lightMode", lightMode);
-  //console.log(lightMode);
+  // browser theme
+  let browserThemeColor = document.querySelector('meta[name="theme-color"]')
   if (lightMode == 'auto') {
-      lightMode = getDetectTheme(); //раз уж один раз вызываем, то можно и без функции, тут код писать, но лучше так )
+      lightMode = getDetectTheme();
   }
   //надо засинхронить название input → class
   if (lightMode === 'light'){
     document.documentElement.classList.add("lightmode");
+    browserThemeColor.setAttribute('content', '#FFFFFF');
   } else {
     document.documentElement.classList.remove("lightmode");
+    browserThemeColor.setAttribute('content', '#000');
   }
-  
-  //или можно так составить имя
-  //document.documentElement.classList.add('class_' + lightMode);
 }
 
 // ну тут я условно, ф-ия детектед и возвращает текущую тему
 function getDetectTheme() {
-  //let colorScheme = 'light';
- 
-
-  
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
     colorScheme = 'light';
   } else {
