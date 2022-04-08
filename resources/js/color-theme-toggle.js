@@ -23,18 +23,17 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 function showSelected() {
   let lightMode = document.querySelector('input[name="color-theme"]:checked').value;
   localStorage.setItem("lightMode", lightMode);
-  // browser theme
-  let browserThemeColor = document.querySelector('meta[name="theme-color"]')
+  
   if (lightMode == 'auto') {
       lightMode = getDetectTheme();
   }
   //надо засинхронить название input → class
   if (lightMode === 'light'){
     document.documentElement.classList.add("lightmode");
-    browserThemeColor.setAttribute('content', '#FFFFFF');
+    document.querySelector('meta[name=theme-color]').content ='#FFF';
   } else {
     document.documentElement.classList.remove("lightmode");
-    browserThemeColor.setAttribute('content', '#000');
+    document.querySelector('meta[name=theme-color]').content ='#000';
   }
 }
 
